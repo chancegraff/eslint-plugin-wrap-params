@@ -1,4 +1,6 @@
-# Usage with Prettier in any way will cause formatting errors.
+| ⚠️ Usage with Prettier in any way will cause formatting errors. ⚠️ |
+| ----------- |
+
 
 For those unhappy few whom are still dissatisfied after having configured every ESLint rule. Built as an alternative to relying on hacky solutions with Prettier, as well as implementing rules and fixes that ESLint hasn't or won't. I will continue adding rules as I create them. This is for my own personal use, but you're free to use it and remix it as you see fit.
 
