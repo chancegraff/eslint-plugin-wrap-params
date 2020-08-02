@@ -40,19 +40,19 @@ npm i -D chancegraff/eslint-plugin-wrap-params
 }
 ```
 
-### 2020/08/02
+## Rules
 
 #### `wrap-params/wrap-params`
 
 - Wraps each function parameter onto a new line.
 
-- Original
+##### Original
 
 ```
 (a, {b, c}, d) => { ... }
 ```
 
-- Formatted
+##### Formatted
 
 ```
 (
@@ -66,13 +66,13 @@ npm i -D chancegraff/eslint-plugin-wrap-params
 
 - Wraps each attribute of a destructured object onto a new line when used as a function parameter.
 
-- Original
+##### Original
 
 ```
 ({ a, b, c }, a) => { ... }
 ```
 
-- Formatted
+##### Formatted
 
 ```
 ({
