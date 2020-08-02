@@ -77,3 +77,7 @@ npm i -D git+https://github.com/chancegraff/eslint-plugin-wrap-params.git
     c
 }, a) => { ... }
 ```
+
+
+
+MIT License
