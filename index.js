@@ -7,8 +7,8 @@ const getWrapRule = (a) => ({
 });
 
 module.exports.rules = {
-    ...getWrapRule('wrap-destructured-object-params'),
-    ...getWrapRule('wrap-function-params'),
+    ...getWrapRule('destructured-objects'),
+    ...getWrapRule('wrap-params'),
 };
 
 module.exports.configs = {
