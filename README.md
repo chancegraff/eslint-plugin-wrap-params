@@ -12,7 +12,7 @@ For those unhappy few whom are still dissatisfied after having configured every 
 1. Download the repository into your project manually, or via NPM:
 
 ```
-npm i -D git+https://github.com/chancegraff/eslint-plugin-wrap-params.git
+npm i -D chancegraff/eslint-plugin-wrap-params
 ```
 
 2. Add the plugin to your configuration
