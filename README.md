@@ -4,7 +4,7 @@
 
 For those unhappy few whom are still dissatisfied after having configured every ESLint rule. Built as an alternative to relying on hacky solutions with Prettier by implementing rules and fixes that haven't yet been created by the ESLint team.
 
-This is for my own personal use, but you're free to use it and remix it as you see fit. I will continue adding rules as I create them.
+This is for my personal usage, but you're free to fork and remix it however you see fit. In other words, don't rely on this repo for your own projects, because I won't fix something if it breaks your code.
 
 ## Requirements
 
@@ -44,7 +44,7 @@ npm i -D chancegraff/eslint-plugin-wrap-params
 
 #### `wrap-params/wrap-params`
 
-- Wraps each function parameter onto a new line.
+Wraps each function parameter onto a new line.
 
 ##### Original
 
@@ -64,7 +64,7 @@ npm i -D chancegraff/eslint-plugin-wrap-params
 
 #### `wrap-params/destructured-objects`
 
-- Wraps each attribute of a destructured object onto a new line when used as a function parameter.
+Wraps each attribute of a destructured object onto a new line when used as a function parameter.
 
 ##### Original
 
@@ -82,6 +82,4 @@ npm i -D chancegraff/eslint-plugin-wrap-params
 }, a) => { ... }
 ```
 
-
-
-MIT License
+<sub>MIT License</sub>
