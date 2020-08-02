@@ -1,5 +1,8 @@
 'use strict';
 
+// 1-to-1 clone of code from Putout repository
+// https://github.com/coderaiser/putout
+
 const prepare = (plugin, context, options) => (node) => {
     const {filter, report} = plugin;
 

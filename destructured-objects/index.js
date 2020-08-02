@@ -17,7 +17,7 @@ module.exports.category = 'destructuring';
 module.exports.report = () => 'Keep each property on separate lines when using multiple destructuring properties';
 
 module.exports.include = ({options}) => {
-    const {minProperties = 0} = options[0] || {};
+    const {minProperties = 1} = options[0] || {};
 
     return [
         `VariableDeclarator > .id[type="ObjectPattern"][properties.length>${minProperties}]`,
