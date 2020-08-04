@@ -69,7 +69,7 @@ Wraps each attribute of a destructured object onto a new line when used as a fun
 ##### Original
 
 ```
-({ a, b, c }, a) => { ... }
+({ a, b, c }, d) => { ... }
 ```
 
 ##### Formatted
@@ -79,7 +79,7 @@ Wraps each attribute of a destructured object onto a new line when used as a fun
     a,
     b,
     c
-}, a) => { ... }
+}, d) => { ... }
 ```
 
 <sub>MIT License</sub>
