@@ -20,6 +20,7 @@ module.exports.include = ({options}) => {
     const {minProperties = 1} = options[0] || {};
 
     return [
+        `VariableDeclarator > .params[length>${minProperties}]`,
         `ArrowFunctionExpression > .params[length>${minProperties}]`,
         `FunctionDeclaration > .params[length>${minProperties}]`,
     ];
