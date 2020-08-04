@@ -20,8 +20,8 @@ module.exports.include = ({options}) => {
     const {minProperties = 1} = options[0] || {};
 
     return [
-        `VariableDeclarator.init[type="ArrowFunctionExpression"] > .params[length>${minProperties}]`,
-        `VariableDeclarator.init[type="FunctionExpression"] > .params[length>${minProperties}]`,
+        `VariableDeclarator > .init[type="ArrowFunctionExpression"][params.length>${minProperties}]`,
+        `VariableDeclarator > .init[type="FunctionExpression"][params.length>${minProperties}]`,
         `ArrowFunctionExpression > .params[length>${minProperties}]`,
         `FunctionDeclaration > .params[length>${minProperties}]`,
     ];
@@ -31,9 +31,9 @@ module.exports.filter = ({node}) => {
     if (node.parent.parent.type === 'ForOfStatement')
         return false;
 
-    const {properties} = node;
+    const {params} = node;
     const {line} = node.loc.start;
-    const isLoc = isCorrectLoc(line, properties);
+    const isLoc = isCorrectLoc(line, params);
 
     if (isLoc)
         return false;
