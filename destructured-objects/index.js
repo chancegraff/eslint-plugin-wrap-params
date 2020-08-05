@@ -24,8 +24,8 @@ module.exports.include = ({options}) => {
     const {minProperties = 1} = options[0] || {};
 
     return [
-        `ArrowFunctionExpression > .params[type="ObjectPattern"][properties.length>${minProperties}]`,
-        `FunctionDeclaration > .params[type="ObjectPattern"][properties.length>${minProperties}]`,
+        `ArrowFunctionExpression > .params[type="ObjectPattern"][properties.length>=${minProperties}]`,
+        `FunctionDeclaration > .params[type="ObjectPattern"][properties.length>=${minProperties}]`,
     ];
 };
 
