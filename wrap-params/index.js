@@ -2,11 +2,15 @@
 
 var isCorrectLoc = (line, properties) => {
     const n = properties.length;
+    const lens = [];
 
     for (let i = 0; i < n; i++) {
         const prop = properties[i];
+        const prevDiffs = lens.reduce((p, c) => p + c, 0);
+        const diff = prop.loc.end.line - prop.loc.start.line;
+        lens.push(diff);
 
-        if (prop.loc.start.line !== i + line + 1)
+        if (prop.loc.start.line !== line + i + 1 + prevDiffs)
             return false;
     }
 
