@@ -1,11 +1,11 @@
 'use strict';
 
-var isCorrectLoc = (line, specifiers) => {
-    const n = specifiers.length;
+var isCorrectLoc = (line, specifier) => {
+    const n = specifier.length;
     const lens = [];
 
     for (let i = 0; i < n; i++) {
-        const prop = specifiers[i];
+        const prop = specifier[i];
         const prevDiffs = lens.reduce((p, c) => p + c, 0);
         const diff = prop.loc.end.line - prop.loc.start.line;
         lens.push(diff);
@@ -30,8 +30,9 @@ module.exports.include = ({options}) => {
 
 module.exports.filter = ({node}) => {
     const {specifiers} = node;
+    const withoutDefaults = specifiers.filter(({ type }) => type === "ImportSpecifier");
     const {line} = node.loc.start;
-    const isLoc = isCorrectLoc(line, specifiers);
+    const isLoc = isCorrectLoc(line, withoutDefaults);
 
     if (isLoc)
         return false;
@@ -41,7 +42,7 @@ module.exports.filter = ({node}) => {
 
 module.exports.fix = ({text}) => {
     return text
-        .replace(/,/g, ',\n')
+        .replace(/,(?!\s{)/g, ',\n')
         .replace('{', '{\n')
         .replace('}', '\n}')
         .replace(/\n(\s*)?\n/g, '\n');
