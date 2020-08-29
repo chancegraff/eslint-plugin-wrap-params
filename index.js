@@ -7,9 +7,10 @@ const getWrapRule = (a) => ({
 });
 
 module.exports.rules = {
+    ...getWrapRule('wrap-params'),
     ...getWrapRule('destructured-imports'),
     ...getWrapRule('destructured-objects'),
-    ...getWrapRule('wrap-params'),
+    ...getWrapRule('logical-expressions'),
 };
 
 module.exports.configs = {
@@ -18,6 +19,7 @@ module.exports.configs = {
             'wrap-params/wrap-params': 'error',
             'wrap-params/destructured-imports': 'error',
             'wrap-params/destructured-objects': 'error',
+            'wrap-params/logical-expressions': 'error',
         },
     },
 };
