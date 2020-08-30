@@ -16,7 +16,7 @@ This is for my personal usage, but you're free to fork and remix it however you 
 1. Download the repository into your project manually, or via NPM:
 
 ```
-npm i -D chancegraff/eslint-plugin-wrap-params
+npm i -D @chancey/eslint-plugin-wrap-params
 ```
 
 2. Add the plugin to your configuration
@@ -24,7 +24,7 @@ npm i -D chancegraff/eslint-plugin-wrap-params
 ```json
 {
     "plugins": [
-        "wrap-params"
+        "@chancey/wrap-params"
     ],
 }
 ```
@@ -34,8 +34,8 @@ npm i -D chancegraff/eslint-plugin-wrap-params
 ```json
 {
     "rules": {
-        "wrap-params/wrap-params": "error",
-        "wrap-params/destructured-objects": "error"
+        "@chancey/wrap-params/wrap-params": "error",
+        "@chancey/wrap-params/destructured-objects": "error"
     }
 }
 ```
